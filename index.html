@@ -6,8 +6,32 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        console.log(navigator);
+    <script type="text/javascript">
+
+        var options = {
+        enableHighAccuracy: true,
+        timeout: 5000,
+        maximumAge: 0
+        };
+
+        function success(pos) {
+        var crd = pos.coords;
+
+        console.log('Your current position is:');
+        console.log(`Latitude : ${crd.latitude}`);
+        console.log(`Longitude: ${crd.longitude}`);
+        console.log(`More or less ${crd.accuracy} meters.`);
+        }
+
+        function error(err) {
+        console.warn(`ERROR(${err.code}): ${err.message}`);
+        }
+
+        navigator.geolocation.getCurrentPosition(success, error, options);
+
+        if (crd < 39.8283) {
+            window.location.href = "https://www.google.com/url?sa=i&url=http%3A%2F%2Fontheworldmap.com%2Fusa%2Fmap-of-western-us.html&psig=AOvVaw0ENI_2FLXULERlVHLGaHOU&ust=1586729573197000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMjN9bay4egCFQAAAAAdAAAAABAD";
+        }
     </script>
     
 </body>
