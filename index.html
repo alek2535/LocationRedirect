@@ -6,6 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        console.log(navigator);
+            if (navigator.platform === "MacIntel" || navigator.platform === "Mac68K" || navigator.platform === "MacPPC") {
+                alert("Welcome, MAC user!");
+            } else {
+                alert("Welcome, PC User!");
+            }
+    </script>
 </body>
 </html>
