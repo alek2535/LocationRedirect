@@ -6,6 +6,24 @@
     <title>Document</title>
 </head>
 <body>
-    
+     
+    <script>
+
+        var operatingSystem = "Unknown OS";
+        // Check For Mac
+        if (navigator.appVersion.indexOf("MacOS") !== -1){ operatingSystem = "MacOS"
+        alert("Welcome Mac Users");
+        }
+        // Check for Windows
+        else if (navigator.appVersion.indexOf("Windows") !== -1){ operatingSystem = "Windows"
+        alert("Welcome Window Users");
+        }
+        else 
+        alert("I dont know what  OS you are using ");
+
+        console.log('Your OS: ' + operatingSystem);
+
+    </script>
+
 </body>
 </html>
